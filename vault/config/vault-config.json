@@ -1,0 +1,24 @@
+{
+  "backend": {
+    "consul": {
+      "address": "consul:8500",
+      "consistency_mode": "default",
+      "disable_registration":"true",
+      "path": "vault/",
+      "scheme": "https",
+      "service": "vault",
+      "tls_ca_file": "/vault/certs/ca.pem",
+      "tls_cert_file": "/vault/certs/crt.pem",
+      "tls_key_file": "/vault/certs/key.pem"
+    }
+  },
+  "listener": {
+    "tcp":{
+      "address": "0.0.0.0:8200",
+      "tls_client_ca_file": "/vault/certs/ca.pem",
+      "tls_cert_file": "/vault/certs/combined_crt.pem",
+      "tls_key_file": "/vault/certs/key.pem"
+    }
+  },
+  "ui": true
+}

@@ -1,0 +1,15 @@
+{
+  "datacenter": "localhost",
+  "data_dir": "/consul/data",
+  "log_level": "DEBUG",
+  "server": true,
+  "ui": true,
+  "ca_file": "/consul/certs/ca.pem",
+  "cert_file": "/consul/certs/crt.pem",
+  "key_file": "/consul/certs/key.pem",
+  "ports": {
+    "https": 8501,
+    "dns": 53,
+     "http": -1
+  }
+}
